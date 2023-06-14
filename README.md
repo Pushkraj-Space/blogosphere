@@ -4,7 +4,7 @@ Simple RESTful API's for blogging platform
 ## Database Setup
 * Create database "blogosphere" or whaterver name you want, in Mysql
 * Import "blogosphere.sql" file in the database that you created
-* Start your Mysql server or XAMPP server
+* Start your Mysql server
 
 ## Run Locally
 
