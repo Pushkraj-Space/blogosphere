@@ -3,8 +3,8 @@ Simple RESTful API's for blogging platform
 
 ## Database Setup
 * Create database "blogosphere" or whaterver name you choose in Mysql
-* Import blogosphere.sql file in the database that you created
-* Start your Mysql server or XAMPP
+* Import "blogosphere.sql" file in the database that you created
+* Start your Mysql server or XAMPP server
 
 ## Run Locally
 
@@ -16,19 +16,20 @@ Clone the project
 
 Go to the project directory
 
-```bash
+```
   cd blogosphere
 ```
 
 Install dependencies
 
-```bash
+```
   npm install
 ```
+***Important*** : Set up environment variables(.env) file as per your machine set up
 
 Start the server
 
-```bash
+```
   npm start
 ```
 
@@ -36,7 +37,7 @@ Start the server
 ## API Reference
 
 To use all below mentioned API's in postman, 
-import "BlogoSphere.postman_collection.json" file.
+import "BlogoSphere.postman_collection.json" file as a new collection
 
 Base URL = http://localhost:8081  
 ### User API's
