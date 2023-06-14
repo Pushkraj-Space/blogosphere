@@ -3,7 +3,7 @@ Simple RESTful API's for blogging platform
 
 ## Database Setup
 * Create database "blogosphere" or whaterver name you choose in Mysql
-* Import blogosphere.sql file in database that you created
+* Import blogosphere.sql file in the database that you created
 * Start your Mysql server or XAMPP
 
 ## Run Locally
@@ -41,7 +41,7 @@ import "BlogoSphere.postman_collection.json" file.
 Base URL = http://localhost:8081 
 #### Register new user
 
-```http://localhost:8081
+```
   POST /api/user
 ```
 
@@ -51,13 +51,47 @@ Base URL = http://localhost:8081
 
 #### Login user
 
-```http
+```
   POST /api/user/login
 ```
+Input in x-www-form-urlencoded 
+    userName:
+    email: 
+    passkey:
+#### Get all users
+Get all users data 
+```
+  GET /api/user/
+```
 
+#### Get single user by user name
+Get single user data
+```
+  GET /api/user/:userName
+```
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+| `userName`      | `string` | user name of any user |
+
+#### Delete user by user name
+
+```
+  DELETE /api/user/:userName
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `userName`      | `string` | user name of logged in user |
+
+#### Update user by user name
+
+```
+  PUT /api/user/:userName
+```
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `userName`      | `string` | user name of logged in user |
+
+
 
 
 
