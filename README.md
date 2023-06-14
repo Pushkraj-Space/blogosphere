@@ -2,9 +2,9 @@
 Simple RESTful API's for blogging platform
 
 # Table of Content
-  1. [Database Setup] (#Database Setup)
+  1. [Database Setup] (#markdown-header-Database Setup)
   2. @Project Setup
-## Database Setup
+# Database Setup
 1. Create database named "blogosphere" or whaterver you choose in Mysql
 2. Import blogosphere.sql file in database that you created
 
