@@ -85,14 +85,64 @@ Base URL = http://localhost:8081
 ```
   PUT /api/user/:userName
 ```
+&emsp;***Input Format*** (x-www-form-urlencoded)\
+&emsp;&emsp;firstName:\
+&emsp;&emsp;lastName:\
+&emsp;&emsp;email:
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `userName`      | `string` | user name of logged in user |
 
+### Blog API's
+
+* #### Create new blog
+```
+  POST /api/blog/
+```
+&emsp;***Input Format*** (x-www-form-urlencoded)\
+&emsp;&emsp;blog_title:\
+&emsp;&emsp;blog_content:
+
+* #### Update blog
+```
+  PUT /api/blog/:blog_id
+```
+&emsp;***Input Format*** (x-www-form-urlencoded)\
+&emsp;&emsp;blog_title:\
+&emsp;&emsp;blog_content:
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `blog_id`      | `string` | blog_id of a blog |
+
+* #### Delete blog
+```
+  DELETE /api/blog/:blog_id
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `blog_id`      | `string` | blog_id of a blog |
 
 
+* #### Get all blogs
+```
+  GET /api/blog/
+```
 
+* #### Get all blogs of a user
+```
+  GET /api/blog/u/:blog_author
+```
 
-  
-  
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `blog_author`      | `string` | The user who posted that blog |
 
+* #### Get a blog of
+```
+  GET /api/blog/:blog_id
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `blog_id`      | `string` | blog_id of a blog|
