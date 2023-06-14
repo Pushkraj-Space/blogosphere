@@ -138,7 +138,7 @@ Base URL = http://localhost:8081
 | :-------- | :------- | :-------------------------------- |
 | `blog_author`      | `string` | The user who posted that blog |
 
-* #### Get a blog of
+* #### Get a blog by id
 ```
   GET /api/blog/:blog_id
 ```
@@ -146,3 +146,43 @@ Base URL = http://localhost:8081
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `blog_id`      | `string` | blog_id of a blog|
+
+### Comment API's
+
+* #### Create new comment
+```
+  POST /api/comment/:blog_id
+```
+&emsp;***Input Format*** (x-www-form-urlencoded)\
+&emsp;&emsp;cmt_text:
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `blog_id`      | `string` | blog_id of a blog where user wants to comment|
+
+* #### Update comment
+```
+  PUT /api/comment/:cmt_id
+```
+&emsp;***Input Format*** (x-www-form-urlencoded)\
+&emsp;&emsp;cmt_text:
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `cmt_id`      | `string` | id of a comment user wants to edit/update|
+
+* #### Delete comment
+```
+  DELETE /api/comment/:cmt_id
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `cmt_id`      | `string` | id of a comment user wants to delete|
+
+* #### Get all comments of a particular blog
+```
+  GET /api/comment/:blog_id
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `blog_id`      | `string` | blog id of a blog  |
