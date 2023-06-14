@@ -38,34 +38,34 @@ Start the server
 To use all below mentioned API's in postman, 
 import "BlogoSphere.postman_collection.json" file.
 
-Base URL = http://localhost:8081 
-#### Register new user
-
+Base URL = http://localhost:8081  
+### User API's
+* #### Register a new user
 ```
   POST /api/user
 ```
+&emsp;***Input Format*** (x-www-form-urlencoded)\
+&emsp;&emsp;firstName:\
+&emsp;&emsp;lastName:\
+&emsp;&emsp;email:\
+&emsp;&emsp;userName:\
+&emsp;&emsp;passkey:
 
-| Description                |
- | :------------------------- |
- | Create new user account |
-
-#### Login user
-
+* #### Login user
 ```
   POST /api/user/login
 ```
-Input in x-www-form-urlencoded 
-    userName:
-    email: 
-    passkey:
-#### Get all users
-Get all users data 
+&emsp;***Input Format*** (x-www-form-urlencoded)\
+&emsp;&emsp;userName:\
+&emsp;&emsp;email:(*optional)\
+&emsp;&emsp;passkey:
+
+* #### Get all users
 ```
   GET /api/user/
 ```
 
-#### Get single user by user name
-Get single user data
+* #### Get single user by user name
 ```
   GET /api/user/:userName
 ```
@@ -73,8 +73,7 @@ Get single user data
 | :-------- | :------- | :-------------------------------- |
 | `userName`      | `string` | user name of any user |
 
-#### Delete user by user name
-
+* #### Delete user by user name
 ```
   DELETE /api/user/:userName
 ```
@@ -82,8 +81,7 @@ Get single user data
 | :-------- | :------- | :-------------------------------- |
 | `userName`      | `string` | user name of logged in user |
 
-#### Update user by user name
-
+* #### Update user by user name
 ```
   PUT /api/user/:userName
 ```
